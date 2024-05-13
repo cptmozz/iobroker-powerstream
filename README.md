@@ -1,17 +1,15 @@
 # Ecoflow PowerStream Output Adjustment Script
+This script connects to the Ecoflow cloud and dynamically adjusts the power requirements of the PowerStream Inverter based on real-time household electricity consumption.
 
-This script connects to the Ecoflow cloud and dynamically adjusts the power requirements of the PowerStream Inverter based on real-time household electricity consumption. 
+It requires a smart meter interfaced with [ioBroker](https://www.iobroker.net/) to transmit the current house consumption data.
 
-It needs a smart meter interfaced with [ioBroker](https://www.iobroker.net/) to transmit the current house consumption data.
-
-## Motivation
-Direct modifications to the Ecoflow PowerStream functionalities have proven challenging and prone to conflicts, particularly after firmware updates.
+## Automated Power Adjustment
 This script offers a practical solution by automatically adjusting household power usage, emulating manual adjustments typically done through the Ecoflow app.
 
-All other Ecoflow settings and functionalities, including battery management and priority settings, remain unchanged and continue to be managed through the Ecoflow app.
+All other Ecoflow settings and functionalities, including battery management and priority settings, remain unchanged and are managed through the Ecoflow app.
 
 ## Use Cases
-This script serves as a foundational tool for:
+Besides its primary function, the script serves as a foundational tool for:
 - Developing custom functionalities.
 - Integrating with different smart home automation systems.
 - Extending compatibility with various adapters and microcontrollers.
@@ -30,7 +28,7 @@ Before running the script, ensure the necessary npm modules are installed. You w
 
 ### Smart Meter Integration
 To interface a smart meter with ioBroker using MQTT:
-1. Follow a detailed tutorial on setting up an MQTT server/broker within ioBroker, such as this comprehensive guide (in German): [Tasmota LeseKopf mit ioBroker](https://bayha-electronics.de/tutorials/tasmota-lesekopf-iobroker/).
+1. Follow a detailed tutorial on setting up an MQTT server/broker within ioBroker, such as this comprehensive guide (in German): [Tasmota Lesekopf mit ioBroker](https://bayha-electronics.de/tutorials/tasmota-lesekopf-iobroker/).
 2. Once the MQTT server is configured, and data transmission is established, navigate to the object tree in ioBroker.
 3. Locate and copy the full variable name representing the Watt value from the smart meter data. Depending on your setup, a Read converter might be required to extract the wattage directly.
 
