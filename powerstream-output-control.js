@@ -379,7 +379,7 @@ function calculateWattHours() {
 
 function isOutdated(state) {
   // requires state.ts to be set
-  if (!state.ts) {
+  if (state.ts === undefined) {
     log("State.ts is not set. Cannot determine if state is outdated.", "error");
   }
   return state.ts < Date.now() - 30 * 1000; // + 30 seconds == outdated
