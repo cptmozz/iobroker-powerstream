@@ -1,10 +1,12 @@
-# Ecoflow PowerStream with Smart Meter Output Adjustment Script
+# Ecoflow PowerStream Output Adjustment Script
 
-## Description
-This script connects to the Ecoflow cloud and dynamically adjusts the power requirements of the PowerStream Inverter based on real-time household electricity consumption. It utilizes a smart meter interfaced with ioBroker to transmit the current house consumption data.
+This script connects to the Ecoflow cloud and dynamically adjusts the power requirements of the PowerStream Inverter based on real-time household electricity consumption. 
+
+It needs a smart meter interfaced with [ioBroker](https://www.iobroker.net/) to transmit the current house consumption data.
 
 ## Motivation
-Direct modifications to the Ecoflow PowerStream functionalities have proven challenging and prone to conflicts, particularly after firmware updates. This script offers a practical solution by automatically adjusting household power usage, emulating manual adjustments typically done through the Ecoflow app.
+Direct modifications to the Ecoflow PowerStream functionalities have proven challenging and prone to conflicts, particularly after firmware updates.
+This script offers a practical solution by automatically adjusting household power usage, emulating manual adjustments typically done through the Ecoflow app.
 
 All other Ecoflow settings and functionalities, including battery management and priority settings, remain unchanged and continue to be managed through the Ecoflow app.
 
@@ -16,3 +18,6 @@ This script serves as a foundational tool for:
 
 ## Prerequisites
 - A smart meter interfaced with ioBroker.
+
+## Credits
+The script is based on reverse engineering of the script contributed by [waly_de](https://forum.iobroker.net/user/waly_de).
